@@ -1,79 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
   <title>Pohjoisen Pallottelijat</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+    .fakeimg { height: 200px; background: #aaa; }
+    /* Pieni hover-efekti kumppanilinkkeihin (valinnainen) */
+    .nav-link:hover { background-color: #0d6efd; color: #fff !important; }
   </style>
 </head>
 <body>
 
-<div class="p-5 bg-primary text-white text-center">
-  <h1>Pohjoisen Pallottelijat</h1>
-  <p>Pohjoisen suurin pieni urheiluseura</p> 
-</div>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Etusivu</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Edustusjoukkue</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Historia</a>
-      </li>
-    </ul>
+  <!-- Hero -->
+  <div class="p-5 bg-primary text-white text-center">
+    <h1>Pohjoisen Pallottelijat</h1>
+    <p>Pohjoisen suurin pieni urheiluseura</p>
   </div>
-</nav>
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <img src="https://github.com/vkatila/Digitekniikkaa/blob/main/images/logo.png?raw=true" 
-           alt="Pohjoisen Pallottelijat logo" 
-           class="img-fluid mb-3 rounded shadow">
-      <p>Seuran logon on suunnitellut ChatGPT</p>
-      <h3 class="mt-4">Seuran yhteustyökumppanit</h3>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pohjolan voima</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kaarlen Kone Ky</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Maijan ruokakauppa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Lääkäriasema Auttava</a>
-        </li>
-      </ul>
-      <hr class="d-sm-none">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand d-none d-sm-inline" href="#">PP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Etusivu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Edustusjoukkue</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Historia</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="col-sm-8">
-      <h2>Pohjoisen Pallottelijat Areena</h2>
-      <h5>Rakennettu yhteistyössä Pohjoisen elinvoima Ry:n kanssa</h5>
-      <img src="https://github.com/vkatila/Digitekniikkaa/blob/main/images/areena.png?raw=true" 
-           alt="Pohjoisen Pallottelijat areena" 
-           class="img-fluid mb-3">
-      <p>Pohjoisen Pallottelijat areena on rakennettu vuonna 2025...Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+  </nav>
+
+  <!-- Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Left column -->
+      <div class="col-sm-4">
+        <img
+          src="https://github.com/vkatila/Digitekniikkaa/blob/main/images/logo.png?raw=true"
+          alt="Pohjoisen Pallottelijat -logo"
+          class="img-fluid mb-3 rounded shadow">
+        <p>Seuran logon on suunnitellut ChatGPT</p>
+
+        <h3 class="mt-4">Seuran yhteistyökumppanit</h3>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item"><a class="nav-link" href="#">Pohjolan voima</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kaarlen Kone Ky</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Maijan ruokakauppa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lääkäriasema Auttava</a></li>
+        </ul>
+        <hr class="d-sm-none">
+      </div>
+
+      <!-- Right column -->
+      <div class="col-sm-8">
+        <h2>Pohjoisen Pallottelijat Areena</h2>
+        <h5>Rakennettu yhteistyössä Pohjoisen elinvoima ry:n kanssa</h5>
+        <img
+          src="https://github.com/vkatila/Digitekniikkaa/blob/main/images/areena.png?raw=true"
+          alt="Pohjoisen Pallottelijat Areena – piirros"
+          class="img-fluid mb-3">
+        <p>
+          Pohjoisen Pallottelijat Areena on rakennettu vuonna 2025. Sunt in culpa qui officia deserunt mollit anim id est
+          laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco.
+        </p>
+
+        <!-- Scorebat API section -->
+        <h2 class="mt-5">Tuoreimmat jalkapallokoosteet</h2>
+
+        <div class="row g-2 align-items-end mb-3">
+          <div class="col-md-6">
+            <label for="compFilter" class="form-label mb-0">Rajaa kilpailun mukaan</label>
+            <input id="compFilter" class="form-control" placeholder="esim. Premier League, La Liga, Finland">
+          </div>
+          <div class="col-md-3">
+            <button id="applyFilter" class="btn btn-primary w-100">Suodata</button>
+          </div>
+          <div class="col-md-3">
+            <button id="clearFilter" class="btn btn-outline-secondary w-100">Tyhjennä</button>
+          </div>
+        </div>
+
+        <div id="videos-status" class="text-muted">Ladataan koosteita…</div>
+        <div id="videos" class="row g-3"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="mt-5 p-4 bg-dark text-white text-center">
-  <p>Pohjoisen Pallottelijat 2025</p>
-</div>
+  <!-- Footer -->
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p class="mb-0">© Pohjoisen Pallottelijat 2025 – Ylpeästi pohjoisesta</p>
+  </div>
 
+  <!-- Scripts -->
+  <script>
+    // Scorebat Video API – ei vaadi API-avainta
+    const API_URL = "https://www.scorebat.com/video-api/v3/";
+
+    async function loadVideos(filterText = "") {
+      const statusEl = document.getElementById("videos-status");
+      const listEl = document.getElementById("videos");
+      statusEl.textContent = "Ladataan koosteita…";
+      listEl.innerHTML = "";
+
+      try {
+        // Välimuistin ohitus, jotta päivitykset näkyvät
+        const res = await fetch(API_URL + "?t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("Virhe " + res.status);
+
+        const data = await res.json();
+        // Odotettu muoto: { response: [ { title, competition, date, thumbnail, matchviewUrl, ... } ] }
+        let items = (data && data.response) ? data.response : [];
+
+        // Suodatus kilpailun nimen perusteella
+        if (filterText) {
+          const q = filterText.toLowerCase();
+          items = items.filter(v => (v.competition || "").toLowerCase().includes(q));
+        }
+
+        if (!items.length) {
+          statusEl.textContent = "Ei näytettävää juuri nyt.";
+          return;
+        }
+
+        statusEl.textContent = "";
+        listEl.innerHTML = items.slice(0, 12).map(v => {
+          const d = new Date(v.date);
+          const dateStr = isNaN(d) ? v.date : d.toLocaleString("fi-FI");
+          return `
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <img src="${v.thumbnail}" class="card-img-top" alt="${v.title}">
+                <div class="card-body">
+                  <h6 class="card-subtitle text-muted mb-1">${v.competition || "Kooste"}</h6>
+                  <h5 class="card-title">${v.title}</h5>
+                  <p class="card-text"><small class="text-muted">${dateStr}</small></p>
+                  <a class="btn btn-primary btn-sm" href="${v.matchviewUrl}" target="_blank" rel="noopener">Katso kooste</a>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join("");
+      } catch (e) {
+        console.error(e);
+        statusEl.innerHTML = `<span class="text-danger">Koosteiden haku epäonnistui. Yritä myöhemmin uudelleen.</span>`;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const inp = document.getElementById("compFilter");
+      document.getElementById("applyFilter").addEventListener("click", () => loadVideos(inp.value));
+      document.getElementById("clearFilter").addEventListener("click", () => { inp.value = ""; loadVideos(); });
+      loadVideos();
+    });
+  </script>
 </body>
 </html>
